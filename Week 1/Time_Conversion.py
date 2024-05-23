@@ -47,3 +47,15 @@ if __name__ == '__main__':
     fptr.write(result + '\n')
 
     fptr.close()
+
+
+
+# def timeConversion(s):
+#     hh=s[0:2]
+#     if 'PM' in s:
+#         hh=int(hh)+12 if hh!='12' else hh
+#     else:
+#         if hh=='12':
+#             hh='00'
+#     return (str(hh)+s[2:8])
+     
