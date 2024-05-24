@@ -14,3 +14,37 @@ import sys
 #
 
 
+
+
+def breakingRecords(scores):
+    # Write your code here
+    best = scores[0]
+    worst = scores[0]
+    maxRec, minRec = 0,0
+    
+    for nums in scores:
+        if(nums > best):
+            best = nums
+            maxRec += 1
+        if(nums < worst):
+            worst = nums
+            minRec += 1
+        else:
+            continue
+    return maxRec, minRec
+            
+        
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    n = int(input().strip())
+
+    scores = list(map(int, input().rstrip().split()))
+
+    result = breakingRecords(scores)
+
+    fptr.write(' '.join(map(str, result)))
+    fptr.write('\n')
+
+    fptr.close()
