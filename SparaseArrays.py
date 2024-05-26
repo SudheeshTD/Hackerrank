@@ -16,7 +16,6 @@ import sys
 #
 
 
-
 def matchingStrings(strings, queries):
     # Write your code here
     dictn = {}
